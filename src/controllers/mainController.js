@@ -1,6 +1,11 @@
 
 module.exports = {
     home: (req,res)=> {
+        if(req.session.first_name){
+            let data = req.session;
+            return res.render("home", {data});
+        }
+
         res.render("home")
     },
     carrito: (req,res)=> {

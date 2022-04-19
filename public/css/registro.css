@@ -1,6 +1,18 @@
 @import url(home.css);
 
+/* ocultar navbar del header partials 
+    ATENCION ESTO SE HACE GRACIAS A REACT
+    TENERLO PRESENTE
 
+    si lo ocultamos como va, se toma todo gracias al main.css
+*/
+/* header nav .menu{
+    visibility: hidden;
+}
+
+.top-header form{
+    visibility: hidden;
+} */
 
 
 .register-google{
@@ -60,6 +72,15 @@
 .registro form h4 {
     margin-top: 1em;
 }
+
+.registro label{
+    margin-top: 20px;
+}
+
+.text-danger{
+    color: var(--verde);
+    
+}
 .registro form input{
     padding: 10px;
     border-radius: 5px;
@@ -69,7 +90,8 @@
     
 }
 .registro form input.box-shadow{/*cree clase box-shadow para que aplique solo a ellos*/
-    box-shadow: 0 0 0 1px rgba(0,0,0,.25) /*yo para que el borde sea gris siempre*/
+    box-shadow: 0 0 0 1px rgba(0,0,0,.25); /*yo para que el borde sea gris siempre*/
+    
 }
     /*cree clase box-shadow para que aplique solo a ellos*/
 .registro form input.box-shadow:focus{ /*yo esto es para que el borde sea de color celeste cuando se enfoca focus*/
@@ -142,6 +164,7 @@
     width: 14px;
     background-color: #eee;
     border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 /* on mouse-over, add border color */
@@ -153,6 +176,7 @@
 .checkbox input:checked ~ .check {
     background-color: var(--verde);
     border:none;
+    
 }
 
 /* create the checkmark and hide when not checked */
@@ -169,10 +193,10 @@
 
 /* checkmark style */
 .checkbox .check:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
+    left: 4px;
+    top: 1px;
+    width: 3px;
+    height: 7px;
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -186,8 +210,11 @@
     display: flex;
 }
 .buttons-register{
-    margin: 1px 1px;
+    margin: 0px 0px 0px 0px;
 } */
+.group-buttons-register{
+    margin: 25px 0px 0px 0px;
+}
 
 @media (min-width: 769px){ 
 
@@ -205,8 +232,11 @@
         padding-bottom: 10vh;    
     } /*si no quiero, se puede borrar*/
 
-    .registro h3, .registro h4{
-        font-size: 26px;
+    .registro h3, .registro h4 {
+        font-size: 22px;
+    }
+    .labelInput{
+        font-size: 22px;
     }
 /* *** inicio solo para checkbox*** */
     /* custom checkbox */
@@ -215,7 +245,16 @@
     }
     .check {        
         height: 25px;
-        width: 25px;        
+        width: 25px;  
+        border-radius: 5px;      
+    }
+    
+    .checkbox .check:after {
+    
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
     }
 /* *** fin solo para checkbox*** */    
 }

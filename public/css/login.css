@@ -1,3 +1,18 @@
+
+/* ocultar navbar del header partials 
+    ATENCION ESTO SE HACE GRACIAS A REACT
+    TENERLO PRESENTE
+
+    si lo ocultamos como va, se toma todo gracias al main.css
+*/
+/* header nav .menu{
+    visibility: hidden;
+}
+
+.top-header form{
+    visibility: hidden;
+} */
+
 .main-login{
     height: 80vh;
 }
@@ -13,7 +28,7 @@
 .login h3{
     width: 90%;
     color: var(--blanco);
-    font-size: var(--text-md); /*--title-md*/
+    font-size: 20px; /*--title-md*/
     font-family: var(--nunito);
     padding: 1em;
     margin: 0 auto;
@@ -42,8 +57,18 @@
     box-shadow: 0 0 0 .125em var(--verde);
     outline: none;
 }
+
+.text-danger{
+    color: var(--verde);
+    
+}
+
+/* .loginRememberCheckbox{
+    
+} */
+
 .group-buttons-login{
-    width: 40vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
 }
@@ -73,9 +98,15 @@
 }
 
 @media (min-width: 769px){
+
+    .login h3{
+        font-size: 30px;
+    }
+
     .login form input {
         width: 40vw;
     }
+
     .group-buttons-login{
         width: 30vw;
     }

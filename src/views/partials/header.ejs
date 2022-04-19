@@ -2,7 +2,7 @@
     <div class="top-header">
         <picture class="logo"> <!--inicio logo-->
             <a href="/">
-                <img src="./img/logoicononegro.png" alt="Logo de Mercadoliebre">
+                <img src="/images/logoicononegro.png" alt="Logo de GPU Online">
             </a>
         </picture> <!--fin logo-->
         <form class="form"> <!--inicio busqueda-->
@@ -14,9 +14,20 @@
             
         </div> <!-- fin burger-menu -->
         <div class= "menu-top-header"> <!--inicio menu-top-header-->
+            <!-- locals.isLogged es de userLoggedMiddleware.js -->
             <a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
-            <a href="/"><i class="fas fa-user"></i></a>
+            <% if (locals.isLogged) { %> 
+                <!-- si aqui queremos una img de perfil entonces quedaría:
+                recordemos que locals.userLogged es de userLoggedMiddleware.js
+                <img src="/images/avatars/<porcentaje= locals.userLogged.avatar %>" alt=""> -->
+            <!-- locals.userLogged es de userLoggedMiddleware.js -->
+            <a href="/users/profile">Hola <%= locals.userLogged.first_name %></a>
+            <% } else { %> 
+            
+            <a href="/users/login"><i class="fas fa-user"></i></a>
+            <% } %> 
         </div> <!--fin menu-top-header-->
+        
     </div> <!--fin top-header-->
     
     <nav>

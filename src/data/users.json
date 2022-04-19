@@ -1,23 +1,131 @@
-[{
-    "id": 1,
-    "first_name": "Sebastian",
-    "last_name": "Bernal",
-    "user_name": "juansebernal",
-    "email": "jusebemas@gmail.com",
-    "password": "arrozconleche"
-  }, {
-    "id": 2,
-    "first_name": "Liam",
-    "last_name": "Evans",
-    "user_name": "liamevans",
-    "email": "liamandresevans@gmail.com",
-    "password": "jEhFV13yd"
-  }, {
-    "id": 3,
-    "first_name": "Claudia",
-    "last_name": "Betancour",
-    "user_name": "Byrom",
-    "email": "clau@gmail.com",
-    "password": "ITVNEZ"
-  }
+[
+ {
+  "id": 1,
+  "first_name": "Sebastian",
+  "last_name": "Bernal",
+  "user_name": "juansebernal",
+  "email": "jusebemas@gmail.com",
+  "password": "arrozconleche"
+ },
+ {
+  "id": 2,
+  "first_name": "Liam",
+  "last_name": "Evans",
+  "user_name": "liamevans",
+  "email": "liamandresevans@gmail.com",
+  "password": "jEhFV13yd"
+ },
+ {
+  "id": 3,
+  "first_name": "Claudia",
+  "last_name": "Betancour",
+  "user_name": "Byrom",
+  "email": "clau@gmail.com",
+  "password": "ITVNEZ"
+ },
+ {
+  "id": 4,
+  "password": "1234",
+  "first_name": "qweqwe",
+  "last_name": "qweqweqwe",
+  "user_name": "fsdfsdf",
+  "email": "a@s.com",
+  "mes": "2022-03-03",
+  "hobby": "PC Multimedia",
+  "image": "no existe"
+ },
+ {
+  "id": 5,
+  "first_name": "qweqw",
+  "last_name": "rewrwe",
+  "user_name": "qweqw",
+  "email": "a@g.com",
+  "password": "$2a$10$C6A8e1kkKH5bMoKukDC8GussQ0NzrRGS/LTCpHVVGqAwzEfVxNdkG",
+  "mes": "2022-03-01",
+  "hobby": [
+   "PC Multimedia",
+   "PC Gaming"
+  ],
+  "image": "no existe"
+ },
+ 
+ {
+  "id": 7,
+  "first_name": "asdf",
+  "last_name": "asdaf",
+  "user_name": "asdf123",
+  "email": "asdf@correo.com",
+  "password": "1234",
+  "mes": "2022-04-11",
+  "hobby": [
+   "PC Gaming",
+   "PC Streaming"
+  ]
+ },
+ {
+  "id": 8,
+  "first_name": "aaaa",
+  "last_name": "qqqq",
+  "user_name": "aq123",
+  "email": "a@x.com",
+  "password": "1234",
+  "mes": "2022-04-06",
+  "hobby": [
+   "PC Gaming",
+   "PC Streaming"
+  ]
+ },
+ {
+  "id": 9,
+  "first_name": "asd",
+  "last_name": "qwe",
+  "user_name": "qaz123",
+  "email": "a@x.com",
+  "password": "1234",
+  "mes": "2022-04-09",
+  "hobby": [
+   "PC Gaming",
+   "PC Streaming"
+  ],
+  "avatar": "1649697190601-Desktop-Empresas.jpg"
+ },
+ {
+  "id": 10,
+  "first_name": "asd",
+  "last_name": "reteweq",
+  "user_name": "usr1234",
+  "email": "f@f.com",
+  "password": "$2a$10$rCdX.IhuzQnl1bCnwaL0oewv3/X3Z3iYPPZVVl9/8Yq8qnttFE55y",
+  "mes": "2022-04-09",
+  "hobby": [
+   "PC Gaming",
+   "PC Streaming"
+  ],
+  "avatar": "1649698017952-52700-oficina.jpg"
+ },
+ {
+  "id": 11,
+  "first_name": "a",
+  "last_name": "a",
+  "user_name": "a",
+  "email": "a@a.com",
+  "password": "$2a$10$DuFjiVctxJnfW6HqpIARJuh9T2lAVVvaPicJYq.grpbPgyJeZiuVG",
+  "mes": "2022-04-30",
+  "hobby": "PC Gaming",
+  "avatar": "1649714068835-52700-oficina.jpg"
+ },
+ {
+  "id": 12,
+  "first_name": "pepito",
+  "last_name": "perez",
+  "user_name": "pepito1",
+  "email": "pepito@perez.com",
+  "password": "$2a$10$dQ49VO60AuWLc30iQPs25ea4XSKIiF3ruZiyuPBAGI.XTWynzaQW6",
+  "mes": "2022-04-07",
+  "hobby": [
+   "PC Gaming",
+   "PC Streaming"
+  ],
+  "avatar": "1649789828554-52700-oficina.jpg"
+ }
 ]

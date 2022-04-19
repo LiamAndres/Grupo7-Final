@@ -12,63 +12,35 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <header>
-        <div class="top-header">
-            <picture class="logo"> <!--inicio logo-->
-                <a href="/">
-                    <img src="./img/logoicononegro.png" alt="Logo de Mercadoliebre">
-                </a>
-            </picture> <!--fin logo-->
-            <form class="form"> <!--inicio busqueda-->
-                <input type="text" class="input" placeholder="Busca productos...">
-                <button type="submit" class="submit"><i class="fas fa-search"></i></button>
-            </form>  <!--fin busqueda-->
-            <div class="burger-menu">  <!--inicio burger-menu-->
-                <i class="fas fa-bars"></i> 
-                
-            </div> <!-- fin burger-menu -->
-            <div class= "menu-top-header"> <!--inicio menu-top-header-->
-                <i class="fas fa-shopping-basket"></i>
-                <i class="fas fa-user"></i>
-            </div> <!--fin menu-top-header-->
-        </div> <!--fin top-header-->
-        
-        <nav>
-            <ul class="menu"><!--inicio menu -->
-                <li>
-                    <a href="#">Productos</a>
-                </li>
-                <li>
-                    <a href="#">Servicios</a>
-                </li>
-                <li>
-                    <a href="#">Conceptos</a>
-                </li>
-                <li>
-                    <a href="#">Noticias</a>
-                </li>
-                <li>
-                    <a href="#">Soporte</a>
-                </li>
-            </ul> <!--fin menu -->
-        </nav> <!-- fin nav -->
-
-    </header> <!-- fin header -->
+    <%- include ("../partials/header")%> 
+    <!-- fin header -->
     <!-- el header del login solo tiene logo, debes ocultar todo menos el logo -->
     <main>
         <!-- listo para modificar, exitos!! 😄  -->
         <main class="main-login">  <!-- inicio de main-->
             <div class="login">  <!-- inicio class login-->
-                <form action="/" method="post">
+                <form action="/users/login" method="post">
                     <h3>Ingresa!</h3>   
-                    <label for="nombreusuario"></label>
-                    <input type="text" id="nombreusuario" name="nombreusuario" placeholder="nombre de usuario"required>            
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" placeholder="Escribe tu email">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>         
                     <label for="password"></label>
-                    <input type="password" id="password" name="password" placeholder="contraseña"required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <div class="loginRememberCheckbox">
+                        <label class="checkbox"> 
+                            <h4>Recordarme</h4>
+                            <input class="espacio checkbox" type="checkbox" name="remember_user" value="PC Multimedia">
+                            <span class="check"></span>
+                        </label>
+                    </div>
                     <div class="group-buttons-login">
                         <button class="buttons-login" type="submit" >continuar</button>
 
-                        <a class="buttons" href="/registro">crear cuenta</a>
+                        <a class="buttons" href="/users/register">crear cuenta</a>
                     </div> <!-- inicio class group-buttons-->
                     <!-- <input type="button" value="ENVIAR"> -->
                 </form>

@@ -1,0 +1,19 @@
+/* si importo home.css se ve más amplio el header. Revisar */
+@import url(main.css);
+
+
+
+.container-profile {
+    width: 100%;
+}
+
+.container-profile h2{
+    
+    color: black;
+
+}
+
+.container-profile img{
+    width: 50%;
+
+}
