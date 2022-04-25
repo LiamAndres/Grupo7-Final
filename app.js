@@ -26,6 +26,7 @@ app.use(userLoggedMiddleware);
 
 // Preparando la constante para trabajar con POST
 app.use(express.urlencoded({ extended: false}));
+//recibir por el body || poder usar req.body
 app.use(express.json());
 
 // Asegurando la compatibilidad con PUT y DELETE
