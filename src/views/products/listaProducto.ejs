@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listado Productos</title>
 </head>
 <body>
 
@@ -13,26 +13,20 @@
     </header>
 
     <main>
-        <% for (let i = 0 ; i< products.length ; i++) { %>
-            <form method="POST" action="/products/eliminar/<%= products[i].id %>?_method=DELETE ">
-                <a href="/products/editar/<%= products[i].id%>">Editar</a>
-                <label for="nombreProducto"> </label>
-                <input id="" name="" type="text" value= "<%= products[i].name %>">
-                <label for="descripcionProducto"></label>
-                <input id="" name="" type="text" value="<%= products[i].description %> ">
-                <!-- atencion pendiente subir archivos multer-->
-                <input type="file" name="" id="">
-                <!-- ATECION NO BORRAR categoríaProducto category aqui recibe del json su valor  -->
-                <!-- <label for="categoríaProducto"></label>
-                <input id="" name="category" type="text" value="<***%= products[i].category %> "> -->
-                <label for="precioProducto"></label>
-                <input id="price" name="price" type="number" value="<%= products[i].price %>">
-                <label for="categoriaProducto">Categoria: </label>
-                <input id="price" name="category" type="text" value="<%= products[i].category %>">
-                <!-- <button type="submit">Editar</button> -->
-            </form>
-        <% } %> 
-        <a href="/products/crearProducto">Crear nuevo producto</a>
+        <h1>Productos :D</h1>
+        <ul>
+            <% for (let i = 0 ; i< productos.length ; i++) { %>
+                <li>
+                    <a href="/products/<%= productos[i].id%>">
+                        <%= productos[i].referencia %>
+                    </a>
+                    
+                </li>
+
+
+
+            <% } %> 
+        </ul>
     </main>
 
     <footer>

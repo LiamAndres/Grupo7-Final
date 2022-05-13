@@ -12,6 +12,13 @@
     background-color: white;
 }
 
+.p-color-negro{
+    
+    color: black;
+    font-size: 14px;
+    
+}
+
 /* .photo-description-detail-product img {
     width: 100%;
     padding: 1%;
@@ -135,6 +142,15 @@
 
 .menu-detail-product hr{
     margin-left: -20px;
+}
+
+.description-detail-product{
+    
+    margin: 0px 0px 10px 20px;
+}
+
+.description-detail-product h3{
+    font-weight: 600;
 }
 
 .desktop-hr-detail-product {

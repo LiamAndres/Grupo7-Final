@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <% for (let i = 0 ; i< productos.length ; i++) { %>
+            <form method="POST" action="/products/eliminar/<%= productos[i].id %>?_method=DELETE ">
+                <a href="/products/editar/<%= productos[i].id%>">Editar</a>
+                <label for="nombreProducto"> </label>
+                <input id="" name="referencia" type="text" value= "<%= productos[i].referencia %>">
+                <label for="fabricante"> </label>
+                <input id="" name="fabricante" type="text" value= "<%= productos[i].fabricante %>">
+                <label for="descripcionProducto"></label>
+                <input id="" name="descripcion" type="text" value="<%= productos[i].descripcion %> ">
+                <label for="">campo para imagen</label>
+                <!-- ATECION NO BORRAR categoríaProducto category aqui recibe del json su valor  -->
+                <!-- <label for="categoríaProducto"></label>
+                <input id="" name="category" type="text" value="<***%= products[i].category %> "> -->
+                <label for="precioProducto"></label>
+                <input id="" name="precio" type="number" value="<%= productos[i].precio %>">
+                <label for="precioProducto"></label>
+                <input id="" name="stock" type="number" value="<%= productos[i].stock %>">
+               <!--  <label for="categoriaProducto">Categoria: </label>
+                <input id="price" name="category" type="text" value="<= productos[i].category %>"> -->
+                <!-- <button type="submit">Editar</button> -->
+            </form>
+        <% } %> 
+        <a href="/products/crearProducto">Crear nuevo producto</a>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

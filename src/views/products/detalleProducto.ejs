@@ -18,27 +18,27 @@
         <article class="photo-description-detail-product"> <!--Inicio photo-description-detail-product-->
             <div class="roja">
                 <div class="verde">
-                    <img src="./img/tarjeta1img.png" alt="product">
+                    <img src="../images/tarjeta1img.png" alt="product">
                 </div>
                 <div class="naranja">
-                    <img src="./img/tarjeta1img.png" alt="product">
-                    <img src="./img/tarjeta1img.png" alt="product">
-                    <img src="./img/tarjeta1img.png" alt="product">
-                    <img src="./img/tarjeta1img.png" alt="product">
-                    <img src="./img/tarjeta1img.png" alt="product">
+                    <img src="../images/tarjeta1img.png" alt="product">
+                    <img src="../images/tarjeta1img.png" alt="product">
+                    <img src="../images/tarjeta1img.png" alt="product">
+                    <img src="../images/tarjeta1img.png" alt="product">
+                    <img src="../images/tarjeta1img.png" alt="product">
                 </div>
             </div>
             <article class="box-datail-product">
                 <!--inicio de div del article box-detail-product-->
-                    <p>Nombre del producto</p>
-                    <p>Precio $</p>
+                    <p><%= productos.referencia %></p>
+                    <p>Precio $<%= productos.precio %></p>
                     <p class="review-detail-product">opiniones | reviews</p>
                     <p>ENVIO GRATIS</p>
-                    <p>Marca:</p>
+                    <p>Marca: <%= productos.fabricante %></p>
                     <div class="desing-detail-product">
                         <p>Cantidad:</p>
                         <button class="button-detail-product">-</button>
-                        <input type="text" name="" id="">
+                        <input type="text" name="" id="" value="">                        
                         <button class="button-detail-product">+</button>
                     </div>
                     <p>Envio a domicilio:</p>
@@ -81,6 +81,15 @@
                         <a href="#">Preguntas v</a>
                     </li>
                     <hr class="mobile-hr-detail-product">
+                </ul>
+                <div class="description-detail-product">
+                    <h3 class="p-color-negro">
+                        Descripcion
+                    </h3>
+                    <p class="p-color-negro">
+                        hola <%= productos.descripcion %>
+                    </p>
+                </div>
         </div>
         <hr class="desktop-hr-detail-product">
 
@@ -90,7 +99,7 @@
             </h3>
             <div>   <!-- inicio de diseño visual de carrusel-->
                 <button class="buttons"> < </button>
-                <img src="./img/tarjeta1img.png" alt="">
+                <img src="../images/tarjeta1img.png" alt="">
                 <button class="buttons">></button>
             </div> <!-- fin de diseño visual de carrusel-->
             <h4>

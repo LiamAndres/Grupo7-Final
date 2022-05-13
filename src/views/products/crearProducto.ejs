@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear Producto</title>
 </head>
 <body>
 
@@ -14,29 +14,35 @@
 
     <main>
         
-        <form method="POST" action="/products/crearProducto" enctype="multipart/form-data">            
-            <label for="nombreProducto"></label>
-            <input name="name" type="text" placeholder="nombreProducto">
-            <label for="descripcionProducto"></label>
-            <input name="description" type="text" placeholder="descripcionProducto">
+        <form method="POST" action="/products/crearProducto" >
+            <!-- aqui no enctype="multipart/form-data" -->         
+            <label for="referencia">nombreProducto</label>
+            <input name="referencia" type="text" placeholder="nombreProducto">
+            <label for="fabricante">fabricante</label>
+            <input name="fabricante" type="text" placeholder="fabricante">
+            <label for="descripcion">descripcion</label>
+            <input name="descripcion" type="text" placeholder="descripcion de producto">
             <!-- atencion pendiente subir archivos multer-->
             <label for="image"></label>
             <input type="file" name="image" id="image">
 
             <label for="categoríaProducto">categoria</label>            
                 <select name="category">
-                    <option value="Gaming">Gaming</option> 
-                    <option value="Streaming">Streaming</option> 
-                    <option value="Streaming and Gaming">Streaming and Gaming</option>
-                    <option value="Estandar">Estandar</option> 
+                    <!-- CategoriasProd es de vistaCrear: en productsController.js -->
+                    <% for (let i = 0 ; i< CategoriasProd.length ; i++) { %>
+                    <option value="<%= CategoriasProd[i].id%>"><%= CategoriasProd[i].nombre%></option> 
+                    
+                    <% } %>
                 </select>
             <!-- <input type="checkbox" name="" id=""> -->
             
             <label for="precioProducto"></label>
-            <input name="price" type="text" placeholder="precioProducto">
-                <button type="submit">Actualizar</button>
+            <input name="precio" type="number" placeholder="precioProducto">
+            <label for="stock"></label>
+            <input name="stock" type="number" placeholder="stock">
+                <button type="submit">Actualizarpepe</button>
                 
-      </form>
+        </form>
        
     </main>
 

@@ -17,16 +17,23 @@ let upload = multer({storage});
 const { route } = require('express/lib/application');
 const { Router } = require('express');
 
-router.get("/",productsController.listar); /* listado de producto */
+
+//CREACION
+/* Formulario de creación de productos. solo visualiza crearProducto.ejs */
+router.get("/crearProducto",productsController.vistaCrear); 
+//Recordar que si la ruta router.post('/products/create'.....va a ser este el cambio en las pruebas
+router.post('/crearProducto', productsController.guardado);
+
+//LECTURA
+/* listado de todos los producto */
+router.get("/",productsController.listado); 
 
 // TAREA, implementar el metodo de detalle para la vista del cliente.
-router.get("/detalle/:id", productsController.detail);
+router.get("/:id", productsController.detalle);
 
-router.get("/crearProducto",productsController.vistaCrear); /* Formulario de creación de productos. solo visualiza crearProducto.ejs */
 //CRUD2//
 /*Verificar estas rutas de products*/
-//Recordar que si la ruta router.post('/products/create'.....va a ser este el cambio en las pruebas
-router.post('/products/create', productsController.create);
+
 router.get('/products/edit/:id', productsController.edit);
 
 module.exports =router;

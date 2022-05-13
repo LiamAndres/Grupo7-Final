@@ -3,20 +3,20 @@
  * @param {import('sequelize').sequelize} sequelize 
  * @param {import('sequelize/dist').DataTypes} DataTypes 
  */
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const CategoriaProd = sequelize.define(
         "CategoriaProd",
         {
             id: {
-                type: DataTypes.INTEGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
             nombre:{
-                type: DataTypes.STRING
+                type: dataTypes.STRING
             },
             descripcion: {
-                type: DataTypes.STRING   
+                type: dataTypes.STRING   
             }
         },
         {

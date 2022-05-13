@@ -1,25 +1,25 @@
 /**
  * Metodo creacion modelo Ordenes_compra
  * @param {import('sequelize').sequelize} sequelize 
- * @param {import('sequelize/dist').DataTypes} DataTypes 
+ * @param {import('sequelize/dist').DataTypes} dataTypes 
  */
- module.exports = (sequelize, DataTypes) => {
+ module.exports = (sequelize, dataTypes) => {
     const Ordenes_compra = sequelize.define(
         "Ordenes_compra",
         {
             id: {
-                type: DataTypes.INTEGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
             total:{
-                type: DataTypes.INTEGER
+                type: dataTypes.INTEGER
             },
             fecha_compra: {
-                type: DataTypes.DATE   
+                type: dataTypes.DATE   
             },
             direccion:{
-                type: DataTypes.STRING
+                type: dataTypes.STRING
             }
         },
         {
