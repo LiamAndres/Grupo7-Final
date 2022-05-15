@@ -48,7 +48,6 @@
   ],
   "image": "no existe"
  },
- 
  {
   "id": 7,
   "first_name": "asdf",
@@ -127,5 +126,30 @@
    "PC Streaming"
   ],
   "avatar": "1649789828554-52700-oficina.jpg"
+ },
+ {
+  "id": 13,
+  "first_name": "mauro",
+  "last_name": "mauro",
+  "user_name": "mauro",
+  "email": "mauro@gmail.com",
+  "password": "$2a$10$MbzItXVuxHRKejkLPXC/ou6iMoRm15Ep7Dw8drz5Otzxh5wzSZ5mm",
+  "mes": "",
+  "avatar": "1652547860934-Desktop-Empresas.jpg"
+ },
+ {
+  "id": 14,
+  "first_name": "Mauro",
+  "last_name": "Sierra",
+  "user_name": "MauroProfe",
+  "email": "mauro@digitalhouse.com",
+  "password": "$2a$10$0MnT2iNmwr2i2N1yprOkoOJCOZCrzAPAbORkCvwb8brhUkiCy3Fzi",
+  "mes": "",
+  "hobby": [
+   "PC Multimedia",
+   "PC Gaming",
+   "PC Edición"
+  ],
+  "avatar": "1652591355177-Desktop-Empresas.jpg"
  }
 ]

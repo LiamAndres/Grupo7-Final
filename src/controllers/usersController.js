@@ -6,11 +6,27 @@ const productsFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersModels= require("../models/User.js")
 
+//bases de datos
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+//modelos
+const Usuarios = db.Usuario;
+
+
 
 const { redirect } = require("express/lib/response");
 const {validationResult} =require ("express-validator");
 
+//modelo de json
 const User = require('../models/User');
+
+/**
+ * Return listar de products
+ * @param {import('express').Request} 
+ * @param {import('express').Response} 
+ */
 
 
 const controller = {
@@ -19,8 +35,10 @@ const controller = {
         res.render("./users/registro.ejs")
     },
     processRegister: (req, res) => {
+        //propiedad de express-validator para validar los campos que vienen del req o body
 		const resultValidation = validationResult(req);
 		
+        //resultValidation tiene la propiedad errors y de errors vemos si tiene >0 o no
 		if (resultValidation.errors.length > 0) {
 			return res.render('./users/registro.ejs', {
 				errors: resultValidation.mapped(),

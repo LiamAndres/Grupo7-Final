@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Producto</title>
+    <link rel="stylesheet" href="/css/crearProducto.css">
 </head>
 <body>
 
@@ -12,19 +13,53 @@
 
     </header>
 
-    <main>
-        
-        <form method="POST" action="/products/crearProducto" >
-            <!-- aqui no enctype="multipart/form-data" -->         
+    <main class="prueba">
+    <ul id="errores" class="errores"></ul>
+
+        <form method="POST" action="/products/crearProducto" enctype="multipart/form-data" id="crearProductoForm">
+                  
             <label for="referencia">nombreProducto</label>
-            <input name="referencia" type="text" placeholder="nombreProducto">
+            <input 
+            class="box-shadow <%= locals.errors && errors.referencia ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.referencia : null %>"
+            name="referencia"
+            id="referencia" 
+            type="text" 
+            placeholder="nombreProducto">
+            <% if (locals.errors && errors.referencia) { %>
+                <div class="text-danger">
+                    <%= errors.referencia.msg %> 
+                </div>
+            <% } %>
             <label for="fabricante">fabricante</label>
-            <input name="fabricante" type="text" placeholder="fabricante">
+            <input 
+            class="box-shadow <%= locals.errors && errors.fabricante ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.fabricante : null %>"
+            name="fabricante" 
+            id="fabricante"
+            type="text" 
+            placeholder="fabricante">
+            <% if (locals.errors && errors.fabricante) { %>
+                <div class="text-danger">
+                    <%= errors.fabricante.msg %> 
+                </div>
+            <% } %>
             <label for="descripcion">descripcion</label>
-            <input name="descripcion" type="text" placeholder="descripcion de producto">
+            <input 
+            class="box-shadow <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.descripcion : null %>"
+            name="descripcion" 
+            id="descripcion"
+            type="text" 
+            placeholder="descripcion de producto">
+            <% if (locals.errors && errors.descripcion) { %>
+                <div class="text-danger">
+                    <%= errors.descripcion.msg %> 
+                </div>
+            <% } %>
             <!-- atencion pendiente subir archivos multer-->
             <label for="image"></label>
-            <input type="file" name="image" id="image">
+            <input type="file" name="imagenProducto" >
 
             <label for="categoríaProducto">categoria</label>            
                 <select name="category">
@@ -37,10 +72,32 @@
             <!-- <input type="checkbox" name="" id=""> -->
             
             <label for="precioProducto"></label>
-            <input name="precio" type="number" placeholder="precioProducto">
+            <input 
+            class="box-shadow <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.precio : null %>"
+            name="precio" 
+            id="precio"
+            type="number" 
+            placeholder="precioProducto">
+            <% if (locals.errors && errors.precio) { %>
+                <div class="text-danger">
+                    <%= errors.precio.msg %> 
+                </div>
+            <% } %>
             <label for="stock"></label>
-            <input name="stock" type="number" placeholder="stock">
-                <button type="submit">Actualizarpepe</button>
+            <input 
+            class="box-shadow <%= locals.errors && errors.stock ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.stock : null %>"
+            name="stock" 
+            id="stock"
+            type="number" 
+            placeholder="stock">
+            <% if (locals.errors && errors.stock) { %>
+                <div class="text-danger">
+                    <%= errors.stock.msg %> 
+                </div>
+            <% } %>
+                <button type="submit">Crear</button>
                 
         </form>
        
@@ -50,5 +107,7 @@
 
     </footer>
     
+    <script src="/js/crearProductoValidation.js"></script>
+
 </body>
 </html>

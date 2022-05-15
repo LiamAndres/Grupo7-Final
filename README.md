@@ -10,6 +10,23 @@
 #### Liam Evans, Estudiante Full Stack 
 
 
+## Instrucciones y pasos:
+### descargar proyecto Grupo7-final
+### descargar proyecto Grupo7-React
+### 1. iniciar con npm install
+### 2. en la ruta de las carpetas Grupo7-final/sql estan los scripts de bases de datos
+### 3. usar Entregable 5_structure, usar b_Entregable 5_productos, usar c_Entregable 5_usuarios en Workbench o a su preferecia
+### 4. si quieres probar login el usuario es: mauro@digitalhouse.com y password: 123456789
+### 5. probar rutas de productos:
+#### listado de productos: http://localhost:3001/products/
+#### formulario de crear producto: http://localhost:3001/products/crearProducto
+#### detalle de producto especifico a editar: http://localhost:3001/products/:id
+##### a modo de ejemplo de ruta producto especifico a editar:  http://localhost:3001/products/3 
+
+
+### Muchas gracias a nuestros queridos profes Mauro Sierra y Pablo Morrone
+
+
 ### ●Buscar inspiración en referentes del mercado:
 
 #### 1. https://www.nvidia.com/es-la/geforce/graphics-cards/

@@ -4,46 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar Producto</title>
 </head>
 <body>
+
     <header>
+
     </header>
-    <main>        
-        <h1>editando producto: <%= product.name %> </h1>
-        <form method="POST" action="/products/editar/<%= product.id%>?_method=PATCH" enctype="multipart/form-data">            
-            <label for="nombreProducto">Nombre producto: </label>
-            <input name="name" type="text" value="<%= product.name %>" >
-            <label for="descripcionProducto">Descripcion: </label>
-            <input name="description" type="text" value="<%= product.description %>" >
-            <br>
-            <br>
-            <!-- atencion pendiente subir archivos multer -->
-            <label for="image">Imagen: </label>
-            <input type="file" name="image" id="image">
-            <br>
-            <br>
-            <label for="categoríaProducto">categoria</label>            
-                <select name="category" >
-                    <option value="<%= product.category %>"><%= product.category %></option> 
-                    <option value="Gaming">Gaming</option> 
-                    <option value="Streaming">Streaming</option> 
-                    <option value="Streaming and Gaming">Streaming and Gaming</option>
-                    <option value="Estandar">Estandar</option> 
-                </select>
-                
+
+    <main>
+        
+        <form method="POST" action="/products/editar/<%= productos.id%>" enctype="multipart/form-data">
+                     
+            <label for="referencia">nombreProducto</label>
+            <input name="referencia" type="text" value="<%= productos.referencia%>">
+            <label for="fabricante">fabricante</label>
+            <input name="fabricante" type="text" value="<%= productos.fabricante%>">
+            <label for="descripcion">descripcion</label>
+            <input name="descripcion" type="text" value="<%= productos.descripcion%>">
+            <!-- atencion pendiente subir archivos multer-->
+            <label for="image"></label>
+            <input type="file" name="imagenProducto" >
+
+            <!-- <label for="categoríaProducto">categoria</label>            
+                <select name="category"> -->
+                    <!-- CategoriasProd es de vistaCrear: en productsController.js -->
+                   <!-- aqui en categoria revisar el crearProducto.ejs for con categoria DB -->
+                <!-- </select> -->
             <!-- <input type="checkbox" name="" id=""> -->
             
-            <label for="precioProducto">Precio: </label>
-            <input name="price" type="text" value="<%= product.price %>" >
-            <br>
-            <button type="submit">Editar</button>
-        </form>   
-        <form action="/products/eliminar/<%= product.id %>?_method=delete" method="POST">
-            <button type="submit">Eliminar</button>
-        </form>    
-    </main> 
+            <label for="precioProducto"></label>
+            <input name="precio" type="number" value="<%= productos.precio%>">
+            <label for="stock"></label>
+            <input name="stock" type="number" value="<%= productos.stock%>">
+                <button type="submit">Actualizar</button>
+                
+        </form>
+       
+    </main>
+
     <footer>
-    </footer>    
+
+    </footer>
+    
 </body>
 </html>

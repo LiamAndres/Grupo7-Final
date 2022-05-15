@@ -36,9 +36,9 @@ app.use(methodOverride("_method"));
 
 //express.static("public") es para fijar esa carpeta y poder acceder directamente a sus subcarpetas
 app.use(express.static("public")); 
-//variable para subir a heroku || puerto 3000
-const PORT = process.env.PORT || 3000;
-//escuchar navegador al servidor express heroku || puerto 3000
+//variable para subir a heroku || puerto 3001
+const PORT = process.env.PORT || 3001;
+//escuchar navegador al servidor express heroku || puerto 3001
 app.listen( PORT, ()=> console.log(`corriendo servidor con Express en el puerto ${PORT}`) );
 
 //rutas estaticas
@@ -57,6 +57,11 @@ const productsRoutes = require("./src/routes/productsRoutes");
 app.use("/",mainRoutes);
 app.use("/users",usersRoutes);
 app.use("/products",productsRoutes);
+
+//ruta de proyecto react
+//app.use('/api/productos', require('./src/routes/api/productos'))
+//app.use('/api/usuarios', require('./src/routes/api/usuarios'))
+
 
 /** fin del archivo app.js**/
 
